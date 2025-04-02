@@ -1,6 +1,7 @@
 'use client'
 
 import React, {useEffect, useState} from 'react'
+import Link from 'next/link';
 
 export default function Feature(){
 
@@ -16,13 +17,13 @@ export default function Feature(){
         <section className="w-full h-[25vh] px-10 feactures flex flex-row justify-between">
 
             {feature.map((item, index)=>(
-                 <div key={item.id} className="flex-1 flex justify-center items-center mx-7  border rounded">
+                 <Link key={item.id}  href={`/${item.id}`} className="flex-1 flex justify-center items-center mx-7  border rounded">
                     <div>
-                    <img  className='w-25 h-25' src={item.image} alt=""/>
+                    <img className='w-25 h-25' src={item.image} alt=""/>
                     <h6>{item.title.slice(0,5)}</h6>    
                     </div>
             
-                 </div>
+                 </Link>
 
             ))}
         </section>

@@ -11,7 +11,7 @@ export default function NewsLetter(){
                 <span>
                     <input type="text"
                     placeholder="enter your emails"
-                    className="h-[5vh] w-80 rounded-l border" />
+                    className="bg-gray-100 h-[5vh] w-80 rounded-l border" />
                     <button className="h-[5vh] rounded-r bg-blue-300">sign up</button>
                 </span>
 

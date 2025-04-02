@@ -14,7 +14,7 @@ export default function Banner(){
     },[])
     return(
 
-        <section className="relative h-[30vh] w-full flex flex-col items-center justify-center">
+        <section className="relative mt-20 bg-gray-200 h-[30vh] w-full flex flex-col items-center justify-center">
            
 
             <div className='relative z-10'>
@@ -24,7 +24,7 @@ export default function Banner(){
 
             </div>
             {backgroundColor.map((images)=>(
-                 <img className='w-full h-25 absolute z-0' src={images.image} alt="" />
+                 <img key={images.id} className='w-full absolut z-0 h-30 absolute z-0' src={images.image} alt="" />
             ))}
        
 

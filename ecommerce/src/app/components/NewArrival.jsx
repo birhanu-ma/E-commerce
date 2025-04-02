@@ -1,6 +1,7 @@
 
 'use client'
 import React, {useState, useEffect} from 'react'
+import Link from 'next/link';
 
 export default function NewArrival(){
     const[newArrival, setNewArrival] = useState([]);
@@ -22,11 +23,11 @@ export default function NewArrival(){
 
         <div className="w-full px-10 flex flex-wrap justify-between">
                 {newArrival.map((item) => (
-                    <div key={item.id} className="w-[24%] justify-around mx-1 my-2 border rounded">
+                    <Link href={`/${item.id}`} key={item.id} className="w-[24%] justify-around mx-1 my-2 border rounded">
                         <img src={item.image} alt={item.title} className="w-full h-[200px] object-contain" />
                         <h6>{item.title.slice(0,30)}</h6>
                         <p>{item.price}</p>
-                    </div>
+                    </Link>
                 ))}
         </div>
         

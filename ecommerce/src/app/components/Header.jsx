@@ -13,7 +13,7 @@ export default function Header() {
     },[])
 
   return (
-    <section className="relative w-full h-[100vh]  flex justify-center  items-center " id="heros">
+    <section className="relative z-5 w-full h-[100vh]  flex  items-center justify-between " id="heros">
       
     
         <div className="relative z-10 ml-10">
@@ -26,7 +26,7 @@ export default function Header() {
         </div>
         {
             backgroundColor.map((backImage)=>(
-                <img className='absolute z-0 w-[100%] h-[80vh]' src={backImage.image} alt={backImage.title} />
+                <img key={backImage.id} className='absolute right-0 z-0 w-[50%] h-[80vh]' src={backImage.image} alt={backImage.title} />
 
             ))
         }

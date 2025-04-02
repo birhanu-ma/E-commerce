@@ -2,6 +2,7 @@
 
 'use client'
 import React, {useState, useEffect} from 'react'
+import Link from 'next/link';
 
 export default function SmallBanner(){
 
@@ -23,7 +24,7 @@ export default function SmallBanner(){
         <section className="w-full h-[100vh] flex flex-col mt-15">
             <div className="h-[35vh] px-10 flex flex-row justify-between  my-10">
                 {smallBanner.map((item)=>(
-                      <div key={item.id} className="h-[40vh] flex flex-col  flex-1 mx-7  border rounded">
+                      <Link href={`/${item.id}`}  key={item.id} className="h-[40vh] flex flex-col  flex-1 mx-7  border rounded">
                         <div className='flex justify-center'>
                         <img className='h-50 w-80' src={item.image} alt={item.title}/>
                         </div>
@@ -31,7 +32,7 @@ export default function SmallBanner(){
                       <h6>{item.title}</h6>
                       <p>{item.price}</p>
                       </div>
-                      </div>
+                      </Link>
 
                 ))}
 
