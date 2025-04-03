@@ -41,7 +41,7 @@ export default function ProductDetails({ params }) {
           <span>
             <input type="number" className="pl-7 w-20 border rounded-full" defaultValue="1" />
             <button 
-              className="w-30 bg-blue-400 rounded-full"
+              className="cursor-pointer w-30 bg-blue-400 rounded-full"
               onClick={() => dispatch(addToCart(product))}
             >
               Add to cart
