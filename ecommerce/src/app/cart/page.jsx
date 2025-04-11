@@ -1,6 +1,9 @@
 'use client';
 import { useSelector } from 'react-redux';
 import Navigation from '../components/Navigation';
+import { FaCcPaypal } from "react-icons/fa6";
+import { FaCcMastercard } from "react-icons/fa6";
+import { FaCcVisa } from "react-icons/fa6";
 
 export default function Cart() {
   const cartItems = useSelector((state) => state.cartAdded);
@@ -8,9 +11,9 @@ export default function Cart() {
   return (
     <section className="flex">
       <Navigation />
-      <div className="mt-15 w-full flex flex-row mx-10">
-        {/* Left Column - Cart Items */}
-        <div className="w-[65%] flex flex-col border mr-3">
+      <div className="mt-15 w-full flex flex-col sm:flex-row  mx-10">
+  
+        <div className="md:w-[65%] w-full flex flex-col shadow-lg mb-10 md:mr-3 px-10">
           <div className="">
             <h1>Cart</h1>
             <span className="flex justify-between">
@@ -29,7 +32,7 @@ export default function Cart() {
             
             {cartItems.length > 0 ? (
               cartItems.map((item) => (
-                <div key={item.id} className="flex flex-row mx-3 border py-3 my-2">
+                <div key={item.id} className="flex flex-row mx-3 shadow py-3 my-2">
                   <img 
                     className="h-20 w-20 object-contain" 
                     src={item.image} 
@@ -53,8 +56,8 @@ export default function Cart() {
           </div>
         </div>
 
-        {/* Right Column - Order Summary */}
-        <div className="w-[35%] flex flex-col border ml-3 p-4">
+     
+        <div className="md:w-[35%] w-full shadow-lg flex flex-col  md:ml-3 p-4">
           <div className="flex flex-col">
             <div className="flex flex-row items-center mb-4">
               <img className="w-12 h-12 p-2 border rounded-full" src="/secure-icon.png" alt="Secure" />
@@ -86,9 +89,9 @@ export default function Cart() {
           <div className="flex flex-col mt-6">
             <h1 className="font-bold mb-3">Pay with</h1>
             <div className="flex flex-row space-x-3">
-              <img className="h-8" src="/visa.png" alt="Visa" />
-              <img className="h-8" src="/mastercard.png" alt="Mastercard" />
-              <img className="h-8" src="/paypal.png" alt="PayPal" />
+              <FaCcVisa size={40}/>
+              <FaCcMastercard size={40}/>
+              <FaCcPaypal size={40}/>
             </div>
             <hr className="my-4" />
             <div className="flex items-start">

@@ -1,7 +1,8 @@
 
 export default function NewsLetter(){
     return(
-        <section className="bg-green-100 w-full h-[25vh] flex flex-row border rounded justify-between px-10 my-10">
+        <section className="bg-green-600 w-full h-[25vh] flex flex-row border rounded justify-between px-10 my-10">
+            <img src="/img/" alt="" />
             <div className="flex flex-col justify-center">
                 <h2>sign up for newsletters</h2>
                 <p> get email updates for a special offer</p>
