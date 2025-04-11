@@ -4,16 +4,17 @@ import Navigation from '../components/Navigation';
 import { FaCcPaypal } from "react-icons/fa6";
 import { FaCcMastercard } from "react-icons/fa6";
 import { FaCcVisa } from "react-icons/fa6";
+import Footer from '../components/Footer';
+import NewsLetter from '../components/NewsLetter';
 
 export default function Cart() {
   const cartItems = useSelector((state) => state.cartAdded);
 
   return (
-    <section className="flex">
+    <section className="flex flex-col">
       <Navigation />
-      <div className="mt-15 w-full flex flex-col sm:flex-row  mx-10">
-  
-        <div className="md:w-[65%] w-full flex flex-col shadow-lg mb-10 md:mr-3 px-10">
+      <div className="mt-15 flex flex-col sm:flex-row  mx-10">
+        <div className="md:w-[65%] w-full flex flex-col shadow-lg md:mr-3 px-10">
           <div className="">
             <h1>Cart</h1>
             <span className="flex justify-between">
@@ -57,8 +58,8 @@ export default function Cart() {
         </div>
 
      
-        <div className="md:w-[35%] w-full shadow-lg flex flex-col  md:ml-3 p-4">
-          <div className="flex flex-col">
+        <div className="md:w-[33%] w-full shadow-lg flex flex-col  md:ml-3 p-4">
+          <div className="flex flex-col mt-6">
             <div className="flex flex-row items-center mb-4">
               <img className="w-12 h-12 p-2 border rounded-full" src="/secure-icon.png" alt="Secure" />
               <span className="ml-2 text-sm">Secure checkout</span>
@@ -103,7 +104,11 @@ export default function Cart() {
             </div>
           </div>
         </div>
+     
       </div>
+      <NewsLetter/>
+      <Footer/>
+     
     </section>
   );
 }
